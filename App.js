@@ -1,21 +1,42 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { createAppContainer, createSwitchNavigator } from 'react-navigation'
+import { createStackNavigator } from 'react-navigation-stack'
+// import { createBottomTabNavigator } from 'react-navigation-tabs'
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+import LoginScreen from './src/screens/LoginScreen'
+import MyAccount from './src/screens/MyAccount'
+import StoreListScreen from './src/screens/StoreListScreen'
+import OrderCreateScreen from './src/screens/OrderCreateScreen'
+import OrderConfirmScreen from './src/screens/OrderConfirmScreen'
+import OrderHistoryScreen from './src/screens/OrderHistoryScreen'
+import SignatureScreen from './src/components/SignatureConfirm'
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default createAppContainer(
+	createStackNavigator(
+		{
+			LoginScreen,
+			'Stores': StoreListScreen,
+			'Order': OrderCreateScreen,
+			'Confirm Order': OrderConfirmScreen,
+			'Sign' : SignatureScreen
+		},
+		{ initialRouteName: 'LoginScreen' }
+	)
+)
+
+// const switchNavigator = createSwitchNavigator({
+// 	loginFlow: createStackNavigator({
+// 		Login: LoginScreen,
+// 	}),
+// 	mainFlow: createBottomTabNavigator({
+// 		// 'New Order': StoreListScreen,
+// 		'New Order': createStackNavigator({
+// 			StoreList: StoreListScreen,
+// 			OrderCreate: OrderCreateScreen,
+// 			OrderConfirm: OrderConfirmScreen,
+// 		}),
+// 		// 'Order History': OrderHistoryScreen,
+// 		// 'My Account': MyAccount,
+// 	}),
+// })
+
+// export default App = createAppContainer(switchNavigator)

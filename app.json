@@ -1,10 +1,26 @@
 {
   "expo": {
-    "name": "dbentoby-mobile.v2",
+    "name": "DBen-Toby Sales App",
     "slug": "dbentoby-mobile.v2",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.jonsthewebguy.dbentoby",
+      "buildNumber": "1"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "android": {
+      "package": "com.jonsthewebguy.dbentoby"
+    }
   }
 }

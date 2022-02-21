@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "dbentoby-mobile.v2",
+    "slug": "dbentoby-mobile.v2",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}

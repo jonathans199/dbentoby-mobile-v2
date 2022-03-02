@@ -15,6 +15,7 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
+      "orientation": "portrait",
       "bundleIdentifier": "com.jonsthewebguy.dbentoby",
       "buildNumber": "13"
     },

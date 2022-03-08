@@ -3,7 +3,7 @@ import { AsyncStorage } from 'react-native'
 
 
 // axios.defaults.baseURL = 'https://quick-parrot-90.loca.lt'
-axios.defaults.baseURL = 'http://hosting.dbentoby.com:3001'
+axios.defaults.baseURL = 'https://hosting.dbentoby.com:3001'
 
 const apiInstance = axios.create()
 

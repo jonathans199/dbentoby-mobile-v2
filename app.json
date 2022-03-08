@@ -2,7 +2,7 @@
   "expo": {
     "name": "DBentoby Sales App",
     "slug": "dbentoby-sales-app",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
@@ -13,11 +13,11 @@
       "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": ["**/*"],
+    "orientation": "portrait",
     "ios": {
       "supportsTablet": true,
-      "orientation": "portrait",
       "bundleIdentifier": "com.jonsthewebguy.dbentoby",
-      "buildNumber": "13"
+      "buildNumber": "1"
     },
     "web": {
       "favicon": "./assets/favicon.png"

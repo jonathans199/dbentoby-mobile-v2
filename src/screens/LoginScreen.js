@@ -15,7 +15,7 @@ const LoginScreen = props => {
   const signIn = () => {
     setLoginError(false)
     axios
-      .post('http://hosting.dbentoby.com:3001' + '/signin', { email, password })
+      .post('https://hosting.dbentoby.com:3001' + '/signin', { email, password })
       .then(async res => {
         try {
           await AsyncStorage.setItem('userInfo', JSON.stringify(res))

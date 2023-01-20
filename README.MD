@@ -10,8 +10,13 @@ Mobile application for DbenToby Internal Sales reps to make orders for *CVS, NAV
 ## IOS application
 Mobile App IOS build - App Store https://apps.apple.com/ua/app/dbentoby/id1529947600
 
-![iphone 1](screnshots/iphone1.png)
-![iphone 2](screnshots/iphone2.png)
+![ipad 1](screenshots/ipad4.png)
+![Backoffice 1](screenshots/ipad1.png)
+![Backoffice 1](screenshots/ipad2.png)
+![Backoffice 1](screenshots/ipad3.png)
+
+![Backoffice 1](screenshots/iphone1.png)
+![Backoffice 1](screenshots/iphone2.png)
 
 ## Back-office
 Production link - https://app.dbentoby.com/

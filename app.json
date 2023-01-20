@@ -2,7 +2,7 @@
   "expo": {
     "name": "DBentoby Sales App",
     "slug": "dbentoby-sales-app",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",

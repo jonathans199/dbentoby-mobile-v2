@@ -8,6 +8,7 @@ import * as FileSystem from 'expo-file-system'
 import { RNS3 } from 'react-native-aws3'
 
 import api from '../api/base'
+import { AWS_ACCESS_KEY, AWS_SECRET_ACCESS_KEY } from '@env'
 
 const OrderConfirmScreen = ({ navigation }) => {
   const [order, setOrder] = useState({})
@@ -42,14 +43,16 @@ const OrderConfirmScreen = ({ navigation }) => {
     const options = {
       bucket: 'dbentoby-signatures',
       region: 'us-east-1',
-      accessKey: 'AKIATQ6GGP7CMILW4A4K',
-      secretKey: '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',
+      accessKey: AWS_ACCESS_KEY,
+      secretKey: AWS_SECRET_ACCESS_KEY,
       successActionStatus: 201,
     }
 
     const handleSignature = signature => {
       const path = FileSystem.cacheDirectory + 'sign.png'
-      FileSystem.writeAsStringAsync(path, signature.replace('data:image/png;base64,', ''), { encoding: FileSystem.EncodingType.Base64 })
+      FileSystem.writeAsStringAsync(path, signature.replace('data:image/png;base64,', ''), {
+        encoding: FileSystem.EncodingType.Base64,
+      })
         .then(res => {
           console.log(res)
           FileSystem.getInfoAsync(path, { size: true, md5: true }).then(file => {
@@ -132,7 +135,9 @@ const OrderConfirmScreen = ({ navigation }) => {
                   <ListItem key={i} bottomDivider>
                     <Avatar
                       source={{
-                        uri: product.image ? product.image : 'http://app.dbentoby.com/static/media/imagena.9ae40db8.png',
+                        uri: product.image
+                          ? product.image
+                          : 'http://app.dbentoby.com/static/media/imagena.9ae40db8.png',
                       }}
                     />
                     <ListItem.Content>

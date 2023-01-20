@@ -4,6 +4,7 @@ import { Text, Button, Input } from 'react-native-elements'
 import { StyleSheet, View, KeyboardAvoidingView, AsyncStorage, Alert } from 'react-native'
 
 import axios from 'axios'
+import { API_URL } from '@env'
 
 const LoginScreen = props => {
   const [email, setEmail] = useState('')
@@ -15,7 +16,7 @@ const LoginScreen = props => {
   const signIn = () => {
     setLoginError(false)
     axios
-      .post('https://hosting.dbentoby.com:3001' + '/signin', { email, password })
+      .post(API_URL + '/signin', { email, password })
       .then(async res => {
         try {
           await AsyncStorage.setItem('userInfo', JSON.stringify(res))
@@ -93,7 +94,7 @@ const LoginScreen = props => {
               buttonStyle={{ borderColor: '#666', backgroundColor: '#666', width: 150, marginTop: 20 }}
               onPress={handleSignUp}
             />
-            <Text style={{marginTop: 20}}>New accounts are reviewed and accepted </Text>
+            <Text style={{ marginTop: 20 }}>New accounts are reviewed and accepted </Text>
             <Text>once email has been verified and approved.</Text>
             <Text style={{ marginTop: 40 }} onPress={() => setNewAccount(false)}>
               Already have an Account? - Login

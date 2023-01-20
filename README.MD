@@ -2,6 +2,8 @@
 ## OVERVIEW 
 Mobile application for DbenToby Internal Sales reps to make orders for *CVS, NAVARRO & WALGREENS stores
 
+Using Camera to scan UPC barcode to for quicker product find. 
+
 ## TECH STACK
 1. Mobile application - React Native Expo 
 2. Backend API - Node.js 
